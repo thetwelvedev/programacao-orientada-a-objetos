@@ -6,8 +6,10 @@
 ***
 
 ## Exercícios da matéria de Programação Orientada a Objetos de 2024.2 de Ciências da Computação
-- [x] Atividade 1(entrega: 19/11)
-- [x] Atividade 2(entrega: 25/11)
+- [x] Atividade 1 - Diagrama UML (entrega: 19/11)
+- [x] Atividade 2 - Implementação do digrama UML no Python Orientado a Objetos e atividade caleum py14 (entrega: 25/11)
+- [ ] Atividade 3 - Referente à Aula 03 - Polimorfismo e Duck Typing (entrega: 09/12)
+- [ ] Atividade 4 - Referente à Aula 03 - Classes Abstratas (entrega: 11/12)
 
 ***
 
