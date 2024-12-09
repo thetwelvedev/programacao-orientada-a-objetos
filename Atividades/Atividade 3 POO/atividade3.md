@@ -40,7 +40,7 @@ R- Não rodaria pois para funcionar nela, a única coisa necessária é ter o m�
 
 Você está desenvolvendo um sistema de combate para um jogo de RPG. No jogo, existem diversos tipos de personagens e criaturas, cada um **com habilidades e formas de ataque únicas**. Esses personagens podem atacar uns aos outros e interagir com elementos do cenário. Além disso, alguns elementos do cenário (como armadilhas) podem causar dano. Seu objetivo é modelar o sistema com os seguintes requisitos:
 
-* Crie uma classe base chamada Entidade:
+- [x] Crie uma classe base chamada Entidade:
     * Cada entidade deve ter um atributo vida inicial (ex.: 100 para personagens e 50 para armadilhas).
     * Deve possuir um método acao() que será implementado de forma diferente para cada tipo de entidade. O método acao() de uma entidade deve permitir que ela ataque outra entidade, reduzindo sua vida.
     * Crie pelo menos 4 subclasses ou classes independentes que representam entidades diferentes:
@@ -49,7 +49,7 @@ Você está desenvolvendo um sistema de combate para um jogo de RPG. No jogo, ex
         * Dragao: cospe fogo, causando 20 pontos de dano.
         * Armadilha: é um objeto do cenário que, quando ativado, causa 5 pontos de dano.
 
-* Crie uma classe chamada Combate
+- [ ] Crie uma classe chamada Combate
     * Deve ter um atributo de classe que é uma lista das entidades que irão participar do combate.
     * Deve ter o método simular_combate.
         Para cada entidade na lista de entidades, chama o método acao() e imprime o resultado no console.
@@ -64,8 +64,13 @@ Você está desenvolvendo um sistema de combate para um jogo de RPG. No jogo, ex
 * O Dragão cospe fogo, causando 20 de dano!
 * A Armadilha é ativada, causando 5 de dano!
 
+Respostas no arquivo abaixo:
+[rpg.py](./rpg.py)
 ####  Perguntas:
 
 5. Explique como o uso de polimorfismo simplifica a implementação da função simular_combate.
+R- Apenas precisei ter o método atacar e parada cada classe filha fiz a modificação necessaria, sendo diferente em cada classe filha e não alterando a classe mão
 6. Em que situações o duck typing pode causar erros neste sistema? Como você evitaria esses erros?
+R- Caso classe não tivesse o método e para evitar isso poderia usar o tratamento de erro com o para AttributeError que seria esse caso.
 7. Qual seria a vantagem de usar classes base versus deixar as classes independentes e confiar no duck typing?
+R- Depende da sua aplicação caso queira manter um relação entre classes seria melhor usar classe base, mas se você só quer usar um método de uma classe em uma situação especifica não precisa ter esse laço de herança.
