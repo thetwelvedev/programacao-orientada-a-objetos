@@ -22,14 +22,19 @@ R- Funcionaria normalmente se eu tivsse implementado algo nela, as modificaçõe
 
 * Você está desenvolvendo um jogo onde personagens podem realizar ações diferentes. Nem todos os personagens precisam ser da mesma classe, mas devem saber executar as ações básicas esperadas pelo jogo.
 
-* Crie três classes (Cavaleiro, Mago, Dragao) e implemente um método atacar() em cada uma, com descrições diferentes (ex.: "O cavaleiro ataca com sua espada").
-* Crie uma função chamada executar_ataque(lista_de_personagens) que recebe uma lista de objetos e chama o método atacar() de cada um.
-* Teste a função com instâncias das três classes diferentes.
+- [x] Crie três classes (Cavaleiro, Mago, Dragao) e implemente um método atacar() em cada uma, com descrições diferentes (ex.: "O cavaleiro ataca com sua espada").
+- [x] Crie uma função chamada executar_ataque(lista_de_personagens) que recebe uma lista de objetos e chama o método atacar() de cada um.
+- [x] Teste a função com instâncias das três classes diferentes.
+
+Respostas no arquivo abaixo:
+[jogo.py](./jogo.py)
 
 ####  Perguntas:
 
 3. Explique por que o método atacar() não precisa estar definido em uma classe base neste caso.
+R- Pois para função executar_ataque() as outras classes apenas precisam do comportamento de atacar(), para funcionar corretamente então não a necessidade de as outras classes herdarem esse comportamento de outra classe.
 4. O que aconteceria se você passasse um objeto que não possui o método atacar() na lista para a função executar_ataque()?
+R- Não rodaria pois para funcionar nela, a única coisa necessária é ter o método atacar()
 
 ### Parte 03
 
