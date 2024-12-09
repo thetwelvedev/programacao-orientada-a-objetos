@@ -49,7 +49,7 @@ Você está desenvolvendo um sistema de combate para um jogo de RPG. No jogo, ex
         * Dragao: cospe fogo, causando 20 pontos de dano.
         * Armadilha: é um objeto do cenário que, quando ativado, causa 5 pontos de dano.
 
-- [ ] Crie uma classe chamada Combate
+- [x] Crie uma classe chamada Combate
     * Deve ter um atributo de classe que é uma lista das entidades que irão participar do combate.
     * Deve ter o método simular_combate.
         Para cada entidade na lista de entidades, chama o método acao() e imprime o resultado no console.
