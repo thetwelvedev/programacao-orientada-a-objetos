@@ -66,3 +66,7 @@ Desenvolva um sistema para gerenciar funcionários de uma empresa. Existem difer
 - [x] Crie objetos de Developer e Manager.
 - [x] Atribua-os a um projeto.
 - [x] Exiba os custos do projeto e as responsabilidades de cada funcionário.
+
+## Exercício Avaliativo
+
+* Faça os execícios da seção 10.7 e 10.9, 11.4 e 11.6 da apostila **py14** da caelum. Envie as soluções pelo SIGAA. As soluções podem ser enviadas através de um arquivo compactado ou arquivo com o link do github com seu código;
