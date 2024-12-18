@@ -36,7 +36,33 @@ Histório de Batalha:""")
                 print(batalha)
 
 def iniciar_duelo(personagens):
-    pass
+    #Separei a lista em duas, uma para cada classe
+    mocinhos = [p for p in personagens if isinstance(p, Mocinho)]
+    viloes = [p for p in personagens if isinstance(p, Vilao)]
+
+    print("\n>>>>> Escolhendo Personagens para o Duelo <<<<<\n")
+    if mocinhos and viloes: #Para haver a luta é necessário ter pelo menos um vilão e um mocinho, logo se uma das listas acima tiver vazia não haverá duelo
+        print("\n>>>>>>>>>> Escolha o Mocinho <<<<<<<<<<") #Aqui assim como em outras funções vai selecionar um dos mocinhos na lista através do indice
+        for i, mocinho in enumerate(mocinhos):
+            print(f"{i+1}. {mocinho.nome}")
+
+        mocinho_escolhido = int(input("Escolha o número do Mocinho: ")) 
+        mocinho = mocinhos[mocinho_escolhido - 1]
+
+        print("\n>>>>>>>>>> Escolha o Vilão <<<<<<<<<<") #Aqui assim como em outras funções vai selecionar um dos vilões na lista através do indice
+        for i, vilao in enumerate(viloes):
+            print(f"{i+1}. {vilao.nome}")
+
+        vilao_escolhido = int(input("Escolha o número do Vilão: ")) 
+        vilao = viloes[vilao_escolhido - 1]
+
+        mocinho.lutar(vilao) #Realiza o duelo de fato
+        sleep(2) 
+        print("\n>>>>>>>>>> Resultado do Duelo <<<<<<<<<<")
+        print(f"{mocinho.nome} | Energia: {mocinho.energia}")
+        print(f"{vilao.nome} | Energia: {vilao.energia}")
+    else:
+        print("Não tem persongens suficientes para o duelo.")
 
 def realizar_torneio(personagens):
     pass
@@ -67,7 +93,7 @@ def alimentar_personagem(personagens):
                 print("\n>>>>>>>>>> Escolha o Vilão <<<<<<<<<<")
                 for i, vilao in enumerate(viloes): #Vai listar os Vilões
                         print(f"{i+1}. {vilao.nome}")
-                escolha = int(input("Escolha o número do mocinho: "))
+                escolha = int(input("Escolha o número do vilão: "))
                 personagem_selecionado = viloes[escolha - 1] #Pois o índice começa em zero
                 personagem_selecionado.alimentar() #Aqui vai realizar a função Alimenatar no vilão
             else: 
