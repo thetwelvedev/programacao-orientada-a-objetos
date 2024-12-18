@@ -52,7 +52,7 @@ class Mocinho(Personagem):
             self.incremento(2) #Vencedor ganha 2 pontos
             outro_personagem.decremento(2) #Derrotado perde 2 pontos
             batalha_vencedor = f"{self.nome} bateu no {outro_personagem.nome}"
-            batalha_perdedor = f"{self.nome} apanhou de {outro_personagem.nome}"
+            batalha_perdedor = f"{outro_personagem.nome} apanhou de {self.nome}"
             #Coloca os históricos tanto do vencedor quanto do perdedor
             self.historico_batalhas.append(batalha_vencedor)
             outro_personagem.historico_batalhas.append(batalha_perdedor)
@@ -105,7 +105,7 @@ class Vilao(Personagem):
             self.incremento(2) #Vencedor ganha 2 pontos
             outro_personagem.decremento(2) #Derrotado perde 2 pontos
             batalha_vencedor = f"{self.nome} bateu no {outro_personagem.nome}"
-            batalha_perdedor = f"{self.nome} apanhou de {outro_personagem.nome}"
+            batalha_perdedor = f"{outro_personagem.nome} apanhou de {self.nome}"
             #Coloca os históricos tanto do vencedor quanto do perdedor
             self.historico_batalhas.append(batalha_vencedor)
             outro_personagem.historico_batalhas.append(batalha_perdedor)
