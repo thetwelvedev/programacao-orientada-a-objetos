@@ -1,5 +1,6 @@
 from personagens import Personagem, Vilao, Mocinho
 from time import sleep
+from random import shuffle
 
 def criar_personagens(personagens):
     print("""\n>>>>>>>>>> Escolha o Personagem <<<<<<<<<<
@@ -25,12 +26,12 @@ def criar_personagens(personagens):
 def mostrar_personagens(personagens):
     for personagem in personagens: #Vou percorrer a lista com o personagens mas vou separar Classe
         if(isinstance(personagem, Mocinho)): #Vejo se é uma instância de Mocinho
-            print(f"""Mocinho | Nome: {personagem.nome} | Energia: {personagem.energia}
+            print(f"""\nMocinho | Nome: {personagem.nome} | Energia: {personagem.energia}
 Histório de Batalha:""")
             for batalha in personagem.historico_batalhas:#Vai imprimir cada batalha desse personagem
                 print(batalha)
         elif(isinstance(personagem, Vilao)): #Vejo se é uma instância de Vilao
-            print(f"""Vilão | Nome: {personagem.nome} | Energia: {personagem.energia}
+            print(f"""\nVilão | Nome: {personagem.nome} | Energia: {personagem.energia}
 Histório de Batalha:""")
             for batalha in personagem.historico_batalhas:#Vai imprimir cada batalha desse personagem
                 print(batalha)
@@ -65,7 +66,38 @@ def iniciar_duelo(personagens):
         print("Não tem persongens suficientes para o duelo.")
 
 def realizar_torneio(personagens):
-    pass
+    participantes = personagens[:] #Faz uma copia da lista pois logo abaixo vamos embaralhar ela e com essa copia não afeta a lista original
+    shuffle(participantes)  #Como o próprio nome já diz ela embaralha a lista
+
+    print("\n>>>>>>>>>>>> Torneio Iniciado <<<<<<<<<<<<")
+    while len(participantes) > 1: #Para ter o torneio tem que ter pelo menos 2 personagens
+        vencedores = [] #Armazena o vencedor por rodada
+
+        for i in range(0, len(participantes), 2): #Vai indo de 2 em dois pois sempre são pares nas lutas
+            personagem1 = participantes[i]
+            personagem2 = participantes[i + 1]
+            print(f"\nBatalha entre {personagem1.nome} e {personagem2.nome}")
+            personagem1.lutar(personagem2)
+            if personagem1.energia > personagem2.energia:
+                vencedores.append(personagem1)  # Adiciona o vencedor
+                print(f"Vencedor: {personagem1.nome}")
+            else:
+                vencedores.append(personagem2)
+                print(f"Vencedor: {personagem2.nome}")
+        
+        #Caso o número de participantes seja ímpar, o último participante avança
+        if len(participantes) % 2 != 0:
+            vencedor_por_wo = participantes[-1]
+            vencedores.append(vencedor_por_wo)
+            print(f"\n{vencedor_por_wo.nome} avançou para a próxima rodada por WO!")
+
+        participantes = vencedores  #Atualiza a lista com só com os vencedores
+
+    vencedor = participantes[0]  #Quando restar apenas um, ele é o campeão
+    print(f"\nVencedor do Torneio: {vencedor.nome} com energia {vencedor.energia}")
+    print("Histórico completo das batalhas:")
+    for batalha in vencedor.historico_batalhas:
+        print(batalha)
 
 def alimentar_personagem(personagens):
     print("""\n>>>>>>>>>> Escolha o Personagem <<<<<<<<<<
