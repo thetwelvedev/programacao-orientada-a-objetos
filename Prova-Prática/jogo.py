@@ -26,12 +26,14 @@ def mostrar_personagens(personagens):
     for personagem in personagens: #Vou percorrer a lista com o personagens mas vou separar Classe
         if(isinstance(personagem, Mocinho)): #Vejo se é uma instância de Mocinho
             print(f"""Mocinho | Nome: {personagem.nome} | Energia: {personagem.energia}
-Histório de Batalha:
-<Adicionar>""")
+Histório de Batalha:""")
+            for batalha in personagem.historico_batalhas:#Vai imprimir cada batalha desse personagem
+                print(batalha)
         elif(isinstance(personagem, Vilao)): #Vejo se é uma instância de Vilao
             print(f"""Vilão | Nome: {personagem.nome} | Energia: {personagem.energia}
-Histório de Batalha:
-<Adicionar>""")
+Histório de Batalha:""")
+            for batalha in personagem.historico_batalhas:#Vai imprimir cada batalha desse personagem
+                print(batalha)
 
 def iniciar_duelo(personagens):
     pass
@@ -40,7 +42,38 @@ def realizar_torneio(personagens):
     pass
 
 def alimentar_personagem(personagens):
-    pass
+    print("""\n>>>>>>>>>> Escolha o Personagem <<<<<<<<<<
+1. Mocinho
+2. Vilão
+3. Voltar
+""")
+    opcao = input("Escolha uma opção: ")
+
+    match opcao:
+        case "1": #Quando for mocinho
+            mocinhos = [p for p in personagens if isinstance(p, Mocinho)] #Cria uma lista só com os Mocinhos
+            if mocinhos: #Se a lista tiver vazia vai ser False e não vai executar
+                print("\n>>>>>>>>>> Escolha o Mocinho <<<<<<<<<<")
+                for i, mocinho in enumerate(mocinhos): #Vai listar os Mocinhos
+                        print(f"{i+1}. {mocinho.nome}")
+                escolha = int(input("Escolha o número do mocinho: "))
+                personagem_selecionado = mocinhos[escolha - 1] #Pois o índice começa em zero
+                personagem_selecionado.alimentar() #Aqui vai realizar a função Alimenatar no mocinho
+            else: 
+                print("Não tem mocinhos!")
+        case "2": #Quando dor vilão
+            viloes = [p for p in personagens if isinstance(p, Vilao)] #Cria uma lista só com os Mocinhos
+            if viloes: #Se a lista tiver vazia vai ser False e não vai executar
+                print("\n>>>>>>>>>> Escolha o Vilão <<<<<<<<<<")
+                for i, vilao in enumerate(viloes): #Vai listar os Vilões
+                        print(f"{i+1}. {vilao.nome}")
+                escolha = int(input("Escolha o número do mocinho: "))
+                personagem_selecionado = viloes[escolha - 1] #Pois o índice começa em zero
+                personagem_selecionado.alimentar() #Aqui vai realizar a função Alimenatar no vilão
+            else: 
+                print("Não tem vilões!")
+        case "3":
+            return
 
 def interagir_com_personagem(personagens):
     pass
