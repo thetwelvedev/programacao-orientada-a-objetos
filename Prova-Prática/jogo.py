@@ -1,22 +1,48 @@
 from personagens import Personagem, Vilao, Mocinho
 from time import sleep
 
-def criar_personagens():
-    pass
+def criar_personagens(personagens):
+    print("""\n>>>>>>>>>> Escolha o Personagem <<<<<<<<<<
+1. Mocinho
+2. Vilão
+3. Voltar
+""")
+    opcao = input("Escolha uma opção: ")
+    match opcao:
+            case "1": #Aqui eu pego o nome, instâncio o personagem e coloco ele na lista personagens
+                print("\n>>>>>>>>>> Mocinho selecionado <<<<<<<<<<")
+                nome = str(input("Digite o nome do personagem: "))
+                personagem = Mocinho(nome)
+                personagens.append(personagem)
+            case "2":
+                print("\n>>>>>>>>>>> Vilão selecionado <<<<<<<<<<<")
+                nome = str(input("Digite o nome do personagem: "))
+                personagem = Vilao(nome)
+                personagens.append(personagem)
+            case "3":
+                return
 
-def mostrar_personagens():
-    pass
+def mostrar_personagens(personagens):
+    for personagem in personagens: #Vou percorrer a lista com o personagens mas vou separar Classe
+        if(isinstance(personagem, Mocinho)): #Vejo se é uma instância de Mocinho
+            print(f"""Mocinho | Nome: {personagem.nome} | Energia: {personagem.energia}
+Histório de Batalha:
+<Adicionar>""")
+        elif(isinstance(personagem, Vilao)): #Vejo se é uma instância de Vilao
+            print(f"""Vilão | Nome: {personagem.nome} | Energia: {personagem.energia}
+Histório de Batalha:
+<Adicionar>""")
 
-def iniciar_duelo():
+def iniciar_duelo(personagens):
     pass
 
 def realizar_torneio(personagens):
     pass
 
-def alimentar_personagem():
+def alimentar_personagem(personagens):
     pass
 
-def interagir_com_personagem():
+def interagir_com_personagem(personagens):
     pass
 
 def menu():
