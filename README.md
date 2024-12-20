@@ -1,4 +1,4 @@
-﻿<h1>
+<h1>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Símbolo Python" width="30" style="vertical-align: middle;">
   programacao-orientada-a-objetos
 </h1>
@@ -8,8 +8,9 @@
 Abrir -> [Atividade](https://github.com/thetwelvedev/programacao-orientada-a-objetos/tree/main/Atividades)
 - [x] Atividade 1 - Diagrama UML (entrega: 19/11)
 - [x] Atividade 2 - Implementação do digrama UML no Python Orientado a Objetos e atividade caleum py14 (entrega: 25/11)
-- [ ] Atividade 3 - Referente à Aula 03 - Polimorfismo e Duck Typing (entrega: 09/12)
-- [ ] Atividade 4 - Referente à Aula 03 - Classes Abstratas (entrega: 11/12)
+- [x] Atividade 3 - Referente à Aula 03 - Polimorfismo e Duck Typing (entrega: 09/12)
+- [x] Atividade 4 - Referente à Aula 03 - Classes Abstratas (entrega: 11/12)
+- [x] Prova Prática (entrega: 18/12)
 
 ***
 
