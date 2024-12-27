@@ -6,10 +6,10 @@
 ***
 ## Exercícios da matéria de Programação Orientada a Objetos de 2024.2 de Ciências da Computação
 Abrir -> [Atividade](https://github.com/thetwelvedev/programacao-orientada-a-objetos/tree/main/Atividades)
-- [x] Atividade 1 - Diagrama UML (entrega: 19/11)
-- [x] Atividade 2 - Implementação do digrama UML no Python Orientado a Objetos e atividade caleum py14 (entrega: 25/11)
-- [x] Atividade 3 - Referente à Aula 03 - Polimorfismo e Duck Typing (entrega: 09/12)
-- [x] Atividade 4 - Referente à Aula 03 - Classes Abstratas (entrega: 11/12)
+- [x] Atividade 1 - Diagrama UML (entrega até 19/11)
+- [x] Atividade 2 - Implementação do digrama UML no Python Orientado a Objetos e atividade caleum py14 (entrega até 25/11)
+- [x] Atividade 3 - Referente à Aula 03 - Polimorfismo e Duck Typing (entrega até 09/12)
+- [x] Atividade 4 - Referente à Aula 03 - Classes Abstratas (entrega até 13/12)
 - [x] Prova Prática (entrega: 18/12)
 
 ***
