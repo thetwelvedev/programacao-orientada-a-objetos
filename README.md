@@ -12,7 +12,7 @@ Abrir -> [Atividade](https://github.com/thetwelvedev/programacao-orientada-a-obj
 - [x] Atividade 4 - Referente à Aula 03 - Classes Abstratas (entrega até 13/12/24)
 - [x] Prova Prática (entrega: 18/12/24)
 - [x] Atividade 5 - Referente à Aula Tratamento de Exceções (entrega até 07/02/25)
-- [ ] Apresentação sobre Busca Sequencial e Binária (data: 12/02/25)
+- [ ] Apresentação sobre Busca Sequencial e Binária (data: 17/02/25)
 
 ***
 
